@@ -31,7 +31,6 @@ module Decidim
         Cell::ViewModel.view_paths << File.expand_path("#{Decidim::AlternativeLanding::Engine.root}/app/views")
       end
 
-      initialize_homepage_content_blocks
       initialize_process_group_content_blocks
     end
   end
