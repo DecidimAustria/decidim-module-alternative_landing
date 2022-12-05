@@ -17,7 +17,7 @@ module Decidim
         end
 
         def background_image
-          model.images_container.background_image.variant(:big)
+          model.images_container.background_image.variant(resize_to_fit: [2880, 1620])
         end
       end
     end
