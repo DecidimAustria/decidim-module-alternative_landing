@@ -21,7 +21,7 @@ module Decidim
         end
 
         def image(item_number)
-          model.images_container.send("image_#{item_number}").square.url
+          model.images_container.send("image_#{item_number}").variant(:square)
         end
       end
     end

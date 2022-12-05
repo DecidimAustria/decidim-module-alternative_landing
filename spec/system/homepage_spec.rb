@@ -45,7 +45,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
 
     describe "cover_full block" do
       it "renders all elements" do
-        expect(page.find(".alternative-landing.cover-full")[:style]).to match(/#{cover_full_block.images_container.background_image.big.url}/)
+        expect(page.find(".alternative-landing.cover-full")[:style]).to match(/#{cover_full_block.images_container.background_image.variant(:big)}/)
 
         within ".alternative-landing.cover-full" do
           within ".cover-text" do
@@ -63,7 +63,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
     describe "cover_half block" do
       it "renders all elements" do
         within ".alternative-landing.cover-half" do
-          expect(page.find(".cover-image")[:style]).to match(/#{cover_half_block.images_container.background_image.big.url}/)
+          expect(page.find(".cover-image")[:style]).to match(/#{cover_half_block.images_container.background_image.variant(:big)}/)
 
           within ".cover-text" do
             within ".cover-title" do
@@ -85,7 +85,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
           1.upto(3) do |item_number|
             within ".stack-item:nth-of-type(#{item_number})" do
               within ".stack-image" do
-                expect(page.find("img")[:src]).to match(/#{stack_horizontal_block.images_container.send(:"image_#{item_number}").landscape.url}/)
+                expect(page.find("img")[:src]).to match(/#{stack_horizontal_block.images_container.send(:"image_#{item_number}").variant(:landscape)}/)
               end
 
               within ".stack-body" do
@@ -112,7 +112,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
           1.upto(3) do |item_number|
             within ".stack-item:nth-of-type(#{item_number})" do
               within ".stack-image" do
-                expect(page.find("img")[:src]).to match(/#{stack_vertical_block.images_container.send(:"image_#{item_number}").square.url}/)
+                expect(page.find("img")[:src]).to match(/#{stack_vertical_block.images_container.send(:"image_#{item_number}").variant(:square)}/)
               end
 
               within ".stack-tags" do
@@ -147,7 +147,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
             end
 
             1.upto(4) do |item_number|
-              expect(page.find(".tile-#{item_number}")[:style]).to match(/#{tiles_block.images_container.send(:"background_image_#{item_number}").landscape.url}/)
+              expect(page.find(".tile-#{item_number}")[:style]).to match(/#{tiles_block.images_container.send(:"background_image_#{item_number}").variant(:landscape)}/)
 
               within ".tile-#{item_number}" do
                 within ".tile-body" do
