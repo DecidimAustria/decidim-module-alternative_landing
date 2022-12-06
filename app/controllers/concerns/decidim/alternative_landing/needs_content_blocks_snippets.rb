@@ -16,7 +16,6 @@ module Decidim
 
         @snippets = Decidim::Snippets.new
 
-        @snippets.add(:alternative_landing, ActionController::Base.helpers.stylesheet_link_tag("decidim/alternative_landing/alternative_landing.css"))
         @snippets.add(:head, @snippets.for(:alternative_landing))
 
         @snippets

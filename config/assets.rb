@@ -18,8 +18,8 @@ Decidim::Webpacker.register_path("#{base_path}/app/packs")
 # SCSS files within the entrypoints, they become available for inclusion using
 # `stylesheet_pack_tag`.
 Decidim::Webpacker.register_entrypoints(
-  decidim_foo: "#{base_path}/app/packs/entrypoints/decidim_alternative_landing_manifest.js",
-  decidim_foo_admin: "#{base_path}/app/packs/entrypoints/decidim_alternative_landing_manifest.js"
+  decidim_alternative_landing: "#{base_path}/app/packs/entrypoints/decidim_alternative_landing_manifest.js",
+  decidim_alternative_landing_admin: "#{base_path}/app/packs/entrypoints/decidim_alternative_landing_manifest.js"
 )
 
 # If you want to import some extra SCSS files in the Decidim main SCSS file
