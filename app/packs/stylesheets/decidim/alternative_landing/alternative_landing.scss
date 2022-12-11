@@ -1,4 +1,12 @@
-//= require fullcalendar/core/main
-//= require fullcalendar/daygrid/main
-//= require_tree ./content_blocks
-//= require_self
+@import "@fullcalendar/core/main";
+@import "@fullcalendar/daygrid/main";
+
+// @import "stylesheets/decidim/alternative_landing/content_blocks/*";
+
+@import "stylesheets/decidim/alternative_landing/content_blocks/calendar";
+@import "stylesheets/decidim/alternative_landing/content_blocks/cover";
+@import "stylesheets/decidim/alternative_landing/content_blocks/shared";
+@import "stylesheets/decidim/alternative_landing/content_blocks/stack_horizontal";
+@import "stylesheets/decidim/alternative_landing/content_blocks/stack_vertical";
+@import "stylesheets/decidim/alternative_landing/content_blocks/tiles";
+@import "stylesheets/decidim/alternative_landing/content_blocks/variables";

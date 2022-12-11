@@ -1,5 +1,6 @@
 @import "variables";
-@import "foundation";
+// @import "foundation";
+@import 'foundation-sites/scss/foundation.scss';
 
 $debate: var(--primary) !default;
 $election: var(--warning) !default;
