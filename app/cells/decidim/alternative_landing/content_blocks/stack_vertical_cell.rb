@@ -21,7 +21,10 @@ module Decidim
         end
 
         def image(item_number)
-          model.images_container.send("image_#{item_number}").variant(resize_to_fill: [960, 960])
+          variant = model.images_container.send("image_#{item_number}").variant(resize_to_fill: [960, 960])
+          return nil if variant.blank?
+
+          url_for(variant)
         end
       end
     end
